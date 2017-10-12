@@ -1,6 +1,8 @@
-# javascript util 모음
+---
+    layout: post
+---
 
-## 1. phoneFormatter
+### 1. phoneFormatter
 전화번호 형식에 맞게 dash(-)를 추가합니다.
 
 ```javascript
@@ -26,7 +28,7 @@ export const phoneFormatter = (num) => {
   return formatNum;
 };
 ```
-## 2. 숫자에 천 단위로 comma 찍기
+### 2. 숫자에 천 단위로 comma 찍기
 
 ```javascript
 export const addComma = (num) => {
@@ -48,4 +50,9 @@ export const getDateFromTimestamp = (timestamp) => {
   return `${year}-${month}-${day}`;
 };
 
+```
+
+### 4. Date객체의 월, 일이 한자리 일때 0 더하기
+```javascript
+export const addZ = (n) => { return n<10 ? '0'+n : ''+n };
 ```
